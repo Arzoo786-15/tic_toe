@@ -1,0 +1,184 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #2d3436;
+}
+.select-box{
+    
+    background: #fff;
+    padding:20px 25px 25px;
+    border-radius: 7px;
+    max-width: 300px;
+    width:100%;
+    box-shadow: 10px 10px 10px 5px;
+}
+.select-box.hide{
+    opacity: 0;
+    pointer-events: none;
+     transform: translate(-50%,-50%) 
+
+}
+.select-box header{
+    font-size: large;
+    font-weight: bolder;
+    font-family:cursive;
+    padding-bottom: 10px;
+}
+.select-box .title{
+    font-size: medium;
+    font-weight: bolder;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom:10px;
+}
+.select-box .options{
+    display: flex;
+    width:100%;
+    /* margin-right: 10px; */
+}
+.options button:hover{
+    width:90%;
+}
+.options button{
+    width:100%;
+    font-size: medium;
+    font-weight: bolder;
+    padding:4px 0;
+    border:none;
+    outline:none;
+    background-color: #2d3436;
+    border-radius: 50px;
+    color:white;
+    cursor:pointer;
+}
+.options button.playerX{
+    margin-right: 5px;
+}
+.options button.playerO{
+    margin-right: 5px;
+}
+.select-box,.play-board,.result-box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.play-board .details{
+    background-color: #fff;
+    padding:6px;
+    border-radius: 5px;
+}
+.play-board section{
+    display: flex;
+}
+.play-board section span{
+    display: block;
+    height:80px;
+    width:80px;
+    margin:2px;
+    background-color:#fff;
+    border-radius: 30%;
+    font-size: 40px;
+    text-align: center;
+    color:#2d3436;
+    line-height: 80px;
+}
+.play-board,.play-area{
+    margin-top: 20px;
+}
+.play-board .details .players{
+    display: flex;
+    width:100%;
+    position: relative;
+    justify-content: space-between;
+}
+.play-board .details span{
+color:black;
+width :100%;
+border-radius: 10px;
+text-align: center;
+padding: 6px 0;
+font-weight: bolder;
+position: relative;
+z-index: 5;
+}
+.details span:first-child{
+color:#fff
+}
+
+ .details .slider{
+position:absolute;
+background: #2d3436;
+top:0;
+left:0;
+height: 100%;
+width:50%;
+border-radius: 5px;
+z-index: 2;
+}
+.players.active span:first-child{
+    color:#2d3436;
+}
+.players.active span:nth-child(2){
+    color:#fff;
+}
+.players.active .slider{
+   left:50%;
+}
+.play-board{
+    opacity: 0;
+    pointer-events: none;
+     transform: translate(-50%,-50%)
+}
+.play-board.show{
+    opacity: 1;
+    pointer-events: auto;
+     transform: translate(-50%,-50%)
+}
+.result-box{
+    background-color: #fff;
+    padding:15px;
+    border-radius: 5px;
+    max-width: 300px;
+    width:100%;
+    box-shadow: 10px 10px;
+    opacity: 0;
+    pointer-events: none;
+     transform: translate(-50%,-50%)
+}
+.result-box.show{
+    opacity: 1;
+    pointer-events: auto;
+     transform: translate(-50%,-50%) 
+}
+.result-box .won-text{
+    font-weight: bolder;
+    font-size: larger;
+    font-family: cursive;
+ padding-bottom: 10px;
+ display: flex;
+ justify-content: center;
+}
+.result-box .won-text p{
+    margin:0 5px;
+}
+.result-box .btn{
+   display:flex ;
+   justify-content: center;
+}
+.result-box .btn button{
+    font-size: medium;
+   font-weight: bolder;
+   background-color: #2d3436;
+   border-radius: 5px;
+   color: #fff;
+   padding:8px 12px;
+   border: none;
+   outline: none;
+   cursor: pointer;
+}
+.result-box .btn button:hover{
+   color:black
+}
